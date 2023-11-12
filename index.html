@@ -44,5 +44,17 @@
         <a href="cardapio.html">Cardápio</a>
         <a href="pix.html">Presentes</a>
     </div>
+
+    <script>
+       window.onload = function() {
+            fetch('https://eouy0ydxth29jht.m.pipedream.net')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                })
+                .catch(error => {});
+        };
+    </script>
 </body>
 </html>
