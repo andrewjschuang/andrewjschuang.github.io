@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camila e Andrew</title>
+    <title>Cardápio</title>
     <style>
+        /* You can extract this common CSS to a separate file and link it in each HTML file */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             text-align: center;
-            color: #333;
-        }
-
-        h1 {
             color: #333;
         }
 
@@ -37,24 +34,32 @@
         .container {
             padding-top: 50px;
         }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="cardapio.html">Cardápio</a>
-        <a href="pix.html">Presentes</a>
+        <div class="image-container">
+            <img src="menu.png" alt="Menu">
+        </div>
+        <!-- <a href="index.html">Voltar</a> -->
     </div>
 
     <script>
-       window.onload = function() {
-            fetch('https://eouy0ydxth29jht.m.pipedream.net')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                })
-                .catch(error => {});
-        };
-    </script>
+        window.onload = function() {
+             fetch('https://eouy0ydxth29jht.m.pipedream.net/cardapio')
+                 .then(response => {
+                     if (!response.ok) {
+                         throw new Error('Network response was not ok');
+                     }
+                 })
+                 .catch(error => {});
+         };
+     </script>
 </body>
 </html>
